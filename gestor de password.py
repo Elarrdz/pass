@@ -1,26 +1,26 @@
-// importar modulos snecesarios//
+#// importar modulos necesarios//
 import string
 import secrets
 
 
-//denir el alfgabeto//
+#//definir el alfabeto//
 letters = string.ascii_letters
 digits = string.digits
 special_chars = string.punctuation
 
 alphabet = letters + digits + special_chars
 
-//largo de contraseña//
+#//largo de la contraseña//
 pwd_length = 12
 
-//generar cadena de contraseña//
+#//generar la cadena de contraseña//
 pwd = ''
 for i in range(pwd_length):
   pwd += ''.join(secrets.choice(alphabet))
 
 print(pwd)
 
-// generar restriccion de cumplimiento de contraseña//
+#// generar la restriccion del cumplimiento de la contraseña//
 while True:
   pwd = ''
   for i in range(pwd_length):
